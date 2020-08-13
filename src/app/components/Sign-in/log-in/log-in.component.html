@@ -1,0 +1,17 @@
+<div style="margin-left: 40%;">
+    <h1 style="margin-left: 5px;">Đăng nhập bằng tài khoản Garena</h1>
+    <mat-form-field appearance="legacy">
+        <mat-label>Show your name Bro :)))</mat-label>
+        <input matInput placeholder="Nhập tên tài khoản của bạn">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field appearance="fill">
+        <mat-label>what your pass :)))</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+</div>

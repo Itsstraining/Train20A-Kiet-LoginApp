@@ -1,0 +1,24 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Garena Icon">
+   <mat-icon><img src="../../../assets/img_garena_logo.png" width="120px"></mat-icon>
+      </button>
+
+    <span class="example-spacer"></span>
+    <h5 *ngIf="this.autherService.user != null">{{this.autherService.user.displayName}}</h5>
+    <button *ngIf="autherService.user==null" mat-icon-button aria-label="Login" (click)="autherService.login()">
+   <mat-icon>login</mat-icon>
+ </button>
+    <button *ngIf="autherService.user !=null" mat-icon-button class="example-icon" aria-label="exit">
+  <mat-icon>clear</mat-icon>
+</button>
+
+    <button mat-button [matMenuTriggerFor]="menu">Chọn Ngôn ngữ</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Việt Nam</button>
+        <button mat-menu-item>Tiếng Anh</button>
+        <button mat-menu-item>Tiếng Đức</button>
+        <button mat-menu-item>Tiếng Pháp</button>
+        <button mat-menu-item>Tiếng Trung</button>
+        <button mat-menu-item>Tiếng Nhật</button>
+    </mat-menu>
+</mat-toolbar>
